@@ -28,7 +28,7 @@ export class AppComponent implements OnInit
 
   public isAutenticated() : boolean
   {
-    let $token = JSON.parse(sessionStorage.getItem('token') || '');
+    const $token = JSON.parse(sessionStorage.getItem('token') || '');
     
     if($token)
     {

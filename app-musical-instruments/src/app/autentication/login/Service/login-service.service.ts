@@ -17,7 +17,6 @@ export class LoginService
 
   constructor(
     private http: HttpClient,
-    // private cookies: Cookie
   ) { }
 
   public login(login: Login) : Observable<any>
