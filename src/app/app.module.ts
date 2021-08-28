@@ -6,25 +6,28 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AutenticationModule } from './autentication/autentication.module';
 import { AutenticationRoutingModule } from './autentication/autentication-routing.module';
-import { NavbarUpComponent } from './layout/navbar-up/navbar-up/navbar-up.component';
+import { NavbarUpComponent } from './layout/admin/navbar-up/navbar-up.component';
+import { AdminComponent } from './layout/admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarUpComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AutenticationModule,
-    AutenticationRoutingModule,    
-    AppRoutingModule,
+    AutenticationRoutingModule,
     ToastrModule.forRoot({
       timeOut: 10000,
       closeButton: true,
       positionClass: 'toast-top-right',
       preventDuplicates: true
     }),
+
+    AppRoutingModule,
   ],
   providers: [
   ],

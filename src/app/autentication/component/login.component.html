@@ -1,19 +1,31 @@
 <div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
-    <mat-card class="box">
-      <mat-card-header>
-        <mat-card-title>Entrar</mat-card-title>
-      </mat-card-header>
-      <form class="example-form">
-        <mat-card-content>
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Login">
-          </mat-form-field>
-  
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Senha">
-          </mat-form-field>
-        </mat-card-content>
-        <button mat-stroked-button color="accent" class="btn-block">Entrar</button>
-      </form>
-    </mat-card>
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Entrar</mat-card-title>
+    </mat-card-header>
+    <form [formGroup]="formLogin"
+      class="example-form">
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input formControlName="userLogin"
+            matInput
+            type="text"
+            placeholder="Login">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input formControlName="userPassword"
+            matInput
+            type="password"
+            placeholder="Senha">
+        </mat-form-field>
+      </mat-card-content>
+      <button (click)="enter()"
+        mat-stroked-button
+        color="primary"
+        class="btn-block">
+        Entrar
+      </button>
+    </form>
+  </mat-card>
 </div>

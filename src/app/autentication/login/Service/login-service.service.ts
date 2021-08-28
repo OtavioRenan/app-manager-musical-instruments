@@ -21,6 +21,6 @@ export class LoginService
 
   public login(login: Login) : Observable<any>
   {
-    return this.http.post(env.baseApiUrl + this.PATH, login);
+    return this.http.post(env.baseApiUrl + '/auth' + this.PATH, login);
   }
 }

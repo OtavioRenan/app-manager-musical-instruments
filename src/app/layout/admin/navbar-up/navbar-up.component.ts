@@ -5,11 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './navbar-up.component.html',
   styleUrls: ['./navbar-up.component.scss']
 })
+
 export class NavbarUpComponent implements OnInit
 {
   public userAuth: any;
 
-  constructor() {this.getUserAuth()}
+  constructor()
+  {
+    this.getUserAuth()
+  }
 
   ngOnInit(): void
   {

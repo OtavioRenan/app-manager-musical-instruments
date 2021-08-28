@@ -1,7 +1,5 @@
-import { routes } from './autentication/autentication-routing.module';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-root',
@@ -20,9 +18,9 @@ export class AppComponent implements OnInit
   {
     if(this.isAutenticated())
     {
-      this.router.navigate(['/']);
+      this.router.navigate(['admin']);
     } else{
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/']);
     }
   }
 

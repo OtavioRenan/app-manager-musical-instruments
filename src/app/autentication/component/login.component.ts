@@ -5,8 +5,6 @@ import { LoginService } from '../login/Service/login-service.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,8 +14,6 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit
 {
   public formLogin: FormGroup = this.createForm();
-
-  public background = 'lightblue';
   
   constructor(
     private formBuilder: FormBuilder,
@@ -28,26 +24,27 @@ export class LoginComponent implements OnInit
     
   ngOnInit(): void
   {
-  
+   
   }
 
   public createForm()
   {
     return this.formBuilder.group({
-      login: ['', [Validators.required]],
-      password: ['', [Validators.required]]
+      userLogin: ['', [Validators.required]],
+      userPassword: ['', [Validators.required]]
     })
   }
 
   public enter() : void
   {
     const login: Login = this.formLogin.value;
+
     this.loginService.login(login).subscribe(
       (resp) => {
         if(resp)
         {
           sessionStorage.setItem('token', JSON.stringify(resp));
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['admin']);
         } else {
           console.log(resp.status);
         }
