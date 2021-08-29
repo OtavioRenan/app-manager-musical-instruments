@@ -5,7 +5,7 @@ import { NavbarUpComponent } from './layout/admin/navbar-up/navbar-up.component'
 
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'admin', component: AdminComponent },
+  { path: 'admin', component: AdminComponent, canActivate: [] },
   { path: 'navbar-up', component: NavbarUpComponent },
 ];
 

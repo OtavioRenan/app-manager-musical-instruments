@@ -8,6 +8,8 @@ import { AutenticationModule } from './autentication/autentication.module';
 import { AutenticationRoutingModule } from './autentication/autentication-routing.module';
 import { NavbarUpComponent } from './layout/admin/navbar-up/navbar-up.component';
 import { AdminComponent } from './layout/admin/admin.component';
+import { MainModule } from './main/main.module';
+import { MainRoutingModule } from './main/main-rounting.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { AdminComponent } from './layout/admin/admin.component';
     BrowserModule,
     BrowserAnimationsModule,
     AutenticationModule,
-    AutenticationRoutingModule,
+    AutenticationRoutingModule,    
+    MainModule,
+    MainRoutingModule,
     ToastrModule.forRoot({
       timeOut: 10000,
       closeButton: true,
