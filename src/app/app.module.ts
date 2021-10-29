@@ -6,14 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NavbarUpComponent } from './components/navbar-up/navbar-up.component';
-import { AdminComponent } from './components/admin/admin.component';
+import { ComponentModule } from './components/component.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavbarUpComponent,
-    AdminComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +24,7 @@ import { AdminComponent } from './components/admin/admin.component';
     AppRoutingModule,
     PagesModule,
     PagesRoutingModule,
+    ComponentModule,
   ],
   providers: [
   ],
