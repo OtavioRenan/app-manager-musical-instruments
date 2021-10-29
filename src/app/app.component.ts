@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 
 export class AppComponent implements OnInit
-{  
+{
   constructor(private router: Router)
   {
 
@@ -24,16 +24,17 @@ export class AppComponent implements OnInit
     }
   }
 
-  public isAutenticated() : boolean
+  public isAutenticated(): boolean
   {
     const $token = JSON.parse(sessionStorage.getItem('token') || '');
-    
+
     if($token)
     {
       return true;
+    } else {
+      sessionStorage.clear();
+      return false;
     }
 
-    sessionStorage.clear();
-    return false;
   }
 }
