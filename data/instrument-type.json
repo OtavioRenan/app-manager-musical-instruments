@@ -1,0 +1,22 @@
+[
+    {
+        "id":"1",
+        "nome":"Percussão",
+        "slug":"percussao"
+    },
+    {
+        "id":"2",
+        "nome":"Sopro",
+        "slug":"sopro"
+    },
+    {
+        "id":"3",
+        "nome":"Corda",
+        "slug":"corda"
+    },
+    {
+        "id":"4",
+        "nome":"Eletrônico",
+        "slug":"eletronico"
+    }
+]
