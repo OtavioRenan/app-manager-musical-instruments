@@ -1,7 +1,7 @@
 [
     {
         "id":"1",
-        "nome":"Cavaquinho",
+        "name":"Cavaquinho",
         "slug":"cavaquinho",
         "inst_description":null,
         "id_inst_typ":null,
