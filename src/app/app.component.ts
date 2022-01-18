@@ -2,7 +2,6 @@ import { routes } from './autentication/autentication-routing.module';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,14 +17,17 @@ export class AppComponent implements OnInit
 
   ngOnInit()
   {
+/*
     if(this.isAutenticated())
     {
       this.router.navigate(['/']);
     } else{
       this.router.navigate(['/dashboard']);
     }
+*/
   }
 
+/*
   public isAutenticated() : boolean
   {
     let $token = JSON.parse(sessionStorage.getItem('token') || '');
@@ -38,4 +40,5 @@ export class AppComponent implements OnInit
     sessionStorage.clear();
     return false;
   }
+*/
 }

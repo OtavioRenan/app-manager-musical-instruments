@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AutenticationModule } from './autentication/autentication.module';
 import { AutenticationRoutingModule } from './autentication/autentication-routing.module';
-import { NavbarUpComponent } from './layout/navbar-up/navbar-up/navbar-up.component';
+import { NavbarUpComponent } from './layout/navbar-up/navbar-up.component';
+import { InstrumentTypeComponent } from './pages/instrument-type/instrument-type.component';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarUpComponent,
+    InstrumentTypeComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,7 @@ import { NavbarUpComponent } from './layout/navbar-up/navbar-up/navbar-up.compon
       positionClass: 'toast-top-right',
       preventDuplicates: true
     }),
+    MaterialModule
   ],
   providers: [
   ],
